@@ -1,19 +1,3 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
 /**
  * This injects Tailwind's base styles and any base styles registered by
  * plugins.
@@ -63,4 +47,18 @@ a {
   .filter-grayscale {
     filter: grayscale(100%);
   }
+}
+
+@font-face {
+  font-family: 'Calibre';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('/fonts/CalibreRegular.otf');
+}
+
+@font-face {
+  font-family:'Calibre';
+  font-style: bold;
+  font-weight: 600;
+  src: local(''), url('/fonts/CalibreBold.otf');
 }

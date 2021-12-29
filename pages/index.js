@@ -18,9 +18,9 @@ function classNames(...classes) {
 }
 export default function Home() {
   return (
-    <Disclosure as='nav' className='bg-gray-800'>
+    <Disclosure as='nav' className='bg-green-700 md:bg-red-500 lg:bg-green-500'>
       {({ open }) => (
-        <>
+        <Fragment className="bg-secondary-800">
           <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
             <div className='relative flex items-center justify-between h-16'>
               <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
@@ -47,7 +47,7 @@ export default function Home() {
                     alt='Workflow'
                   />
                 </div>
-                <div className='hidden sm:block sm:ml-6'>
+                <div className='hidden sm:block sm:ml-6 bg-primary-500'>
                   <div className='flex space-x-4'>
                     {navigation.map((item) => (
                       <a
@@ -55,7 +55,7 @@ export default function Home() {
                         href={item.href}
                         className={classNames(
                           item.current
-                            ? 'bg-gray-900 text-white'
+                            ? 'bg-gray-900 text-secondary-400'
                             : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
@@ -157,7 +157,7 @@ export default function Home() {
               ))}
             </div>
           </Disclosure.Panel>
-        </>
+        </Fragment>
       )}
     </Disclosure>
   );
