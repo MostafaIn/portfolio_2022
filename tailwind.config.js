@@ -1,21 +1,19 @@
-const colors = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors');
 
 module.exports = {
-  mode:'jit',
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  mode: 'jit',
+  content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'media',
   theme: {
     colors: {
       primary: colors.slate,
-      secondary:colors.teal,
+      secondary: colors.teal,
+      tbg: '#0A192F',
     },
     extend: {
-      fontFamily:{
-          Calibre: ['Calibre'],
-          sans:['Calibre','sans-serif'],
+      fontFamily: {
+        Calibre: ['Calibre'],
+        sans: ['Calibre', 'sans-serif'],
       },
       spacing: {
         '8xl': '96rem',
@@ -23,13 +21,13 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
-      }
-    }
+      },
+    },
   },
-  variants:{
-    extend:{
-      fontFamily:['hover','focus'],
-    }
+  variants: {
+    extend: {
+      fontFamily: ['hover', 'focus'],
+    },
   },
   plugins: [
     require('@tailwindcss/forms'),
@@ -38,4 +36,4 @@ module.exports = {
     require('tailwindcss-children'),
     require('@tailwindcss/line-clamp'),
   ],
-}
+};
