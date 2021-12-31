@@ -5,6 +5,9 @@ module.exports = {
   content: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'media',
   theme: {
+    minHeight: {
+      screen: '90vh',
+    },
     colors: {
       primary: colors.slate,
       secondary: colors.teal,

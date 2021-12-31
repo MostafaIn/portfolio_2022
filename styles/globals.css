@@ -2,35 +2,41 @@
  * This injects Tailwind's base styles and any base styles registered by
  * plugins.
  */
- @tailwind base;
+@tailwind base;
 
- /**
+/**
   * This injects Tailwind's component classes and any component classes
   * registered by plugins.
   */
- @tailwind components;
- 
- /**
+@tailwind components;
+
+/**
   * This injects Tailwind's utility classes and any utility classes registered
   * by plugins.
   */
- @tailwind utilities;
- 
- /**
+@tailwind utilities;
+
+/**
   * Use this directive to control where Tailwind injects the hover, focus,
   * responsive, dark mode, and other variants of each class.
   *
   * If omitted, Tailwind will append these classes to the very end of
   * your stylesheet by default.
   */
- @tailwind variants;
+@tailwind variants;
 
- @layer base {
+@layer base {
   h1 {
-    @apply text-2xl;
+    @apply text-2xl lg:text-4xl md:text-3xl;
   }
   h2 {
-    @apply text-xl;
+    @apply text-primary-300 text-3xl lg:text-6xl md:text-5xl;
+  }
+  h3 {
+    @apply text-primary-300 text-2xl lg:text-5xl md:text-4xl;
+  }
+  p {
+    @apply text-lg sm:text-base text-primary-400;
   }
 }
 
@@ -57,7 +63,7 @@
 }
 
 @font-face {
-  font-family:'Calibre';
+  font-family: 'Calibre';
   font-style: bold;
   font-weight: 600;
   src: local(''), url('/fonts/CalibreBold.otf');

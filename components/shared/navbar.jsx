@@ -4,18 +4,15 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { GrClose, GrMenu } from 'react-icons/gr';
 
 import { navLinks } from '@/utils/constants';
-import mylogo from '../../public/images/myLogo.png';
-
-
+import mylogo from '@/images/myLogo.png';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
 const NavBar = () => {
-
   return (
-    <Disclosure as='nav' className='h-24 border-1 border-indigo-200'>
+    <Disclosure as='nav' className='sticky top-0 h-24 border-1 border-indigo-200'>
       {({ open }) => (
         <Fragment>
           <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
@@ -26,12 +23,12 @@ const NavBar = () => {
                   <span className='sr-only'>Open main menu</span>
                   {open ? (
                     <GrClose
-                      className='block h-12 w-12 p-3 rounded-full bg-secondary-200'
+                      className='block h-12 w-12 p-3 rounded-full bg-secondary-200 hover:animate-pulse'
                       aria-hidden='true'
                     />
                   ) : (
                     <GrMenu
-                      className='block h-12 w-12 p-3 rounded-full bg-secondary-200'
+                      className='block h-12 w-12 p-3 rounded-full bg-secondary-200 hover:animate-pulse'
                       aria-hidden='true'
                     />
                   )}
@@ -54,7 +51,7 @@ const NavBar = () => {
                         href={item.path}
                         className={classNames(
                           item.status
-                            ? 'py-3 px-8 rounded-full border-2 text-center text-secondary-500 hover:text-primary-50 hover:bg-secondary-500'
+                            ? 'py-3 px-11 rounded-full border-2 text-center text-secondary-500 hover:text-primary-50 hover:bg-secondary-500 hover:animate-pulse'
                             : 'text-secondary-50 transition duration-300 ease-in-out transform md:hover:-translate-y-1',
                           item.current
                             ? 'bg-gray-900 text-secondary-400'
