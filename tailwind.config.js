@@ -16,7 +16,9 @@ module.exports = {
     extend: {
       fontFamily: {
         Calibre: ['Calibre'],
-        sans: ['Calibre', 'sans-serif'],
+        Tabitha: ['Tabitha'],
+        sans: ['Calibre', 'Tabitha', 'sans-serif'],
+        mono: ['Tabitha', 'Calibre', 'sans-serif'],
       },
       spacing: {
         '8xl': '96rem',

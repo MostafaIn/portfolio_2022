@@ -27,13 +27,13 @@
 
 @layer base {
   h1 {
-    @apply text-2xl lg:text-4xl md:text-3xl;
+    @apply font-mono text-2xl lg:text-4xl md:text-3xl;
   }
   h2 {
-    @apply text-primary-300 text-3xl lg:text-6xl md:text-5xl;
+    @apply font-mono text-primary-300 text-3xl lg:text-6xl md:text-5xl;
   }
   h3 {
-    @apply text-primary-300 text-2xl lg:text-5xl md:text-4xl;
+    @apply font-mono text-primary-300 text-2xl lg:text-5xl md:text-4xl;
   }
   p {
     @apply text-lg sm:text-base text-primary-400;
@@ -67,4 +67,11 @@
   font-style: bold;
   font-weight: 600;
   src: local(''), url('/fonts/CalibreBold.otf');
+}
+
+@font-face {
+  font-family: 'Tabitha';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('/fonts/Tabitha.ttf');
 }

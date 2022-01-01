@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Link from 'next/link';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { Disclosure } from '@headlessui/react';
 import { GrClose, GrMenu } from 'react-icons/gr';
 
 import { navLinks } from '@/utils/constants';
@@ -52,11 +52,11 @@ const NavBar = () => {
                         className={classNames(
                           item.status
                             ? 'py-3 px-11 rounded-full border-2 text-center text-secondary-500 hover:text-primary-50 hover:bg-secondary-500 hover:animate-pulse'
-                            : 'text-secondary-50 transition duration-300 ease-in-out transform md:hover:-translate-y-1',
+                            : 'text-secondary-50 transition duration-300 ease-in-out transform',
                           item.current
                             ? 'bg-gray-900 text-secondary-400'
                             : 'text-secondary-50 hover:bg-gray-700 hover:text-secondary-400',
-                          'px-3 py-2 rounded-md text-lg font-sans'
+                          'px-3 py-2 text-lg font-sans hover:border-b-2 hover:border-secondary-500'
                         )}
                         aria-current={item.current ? 'page' : undefined}>
                         {item.title}
