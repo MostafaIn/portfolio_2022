@@ -44,24 +44,27 @@ const NavBar = () => {
                   </Link>
                 </div>
                 <div className='hidden sm:block sm:ml-6'>
-                  <div className='flex space-x-8'>
-                    {navLinks.map((item) => (
-                      <a
-                        key={item.title}
-                        href={item.path}
-                        className={classNames(
-                          item.status
-                            ? 'py-3 px-11 rounded-full border-2 text-center text-secondary-500 hover:text-primary-50 hover:bg-secondary-500 hover:animate-pulse'
-                            : 'text-secondary-50 transition duration-300 ease-in-out transform',
-                          item.current
-                            ? 'bg-gray-900 text-secondary-400'
-                            : 'text-secondary-50 hover:bg-gray-700 hover:text-secondary-400',
-                          'px-3 py-2 text-lg font-sans hover:border-b-2 hover:border-secondary-500'
-                        )}
-                        aria-current={item.current ? 'page' : undefined}>
-                        {item.title}
-                      </a>
-                    ))}
+                  <div className='flex space-x-8 items-center'>
+                    {navLinks.map((item) =>
+                      item.title.includes('Resume') ? (
+                        <a className='resume-btn' key={item.title} href={item.path}>
+                          {item.title}
+                        </a>
+                      ) : (
+                        <a
+                          key={item.title}
+                          href={item.path}
+                          className={classNames(
+                            item.current
+                              ? 'text-secondary-400 border-b-2 border-secondary-500'
+                              : 'text-secondary-50 hover:bg-gray-700 hover:text-secondary-400',
+                            'px-3 py-2 text-lg font-sans hover:border-b-2 hover:border-secondary-500'
+                          )}
+                          aria-current={item.current ? 'page' : undefined}>
+                          {item.title}
+                        </a>
+                      )
+                    )}
                   </div>
                 </div>
               </div>

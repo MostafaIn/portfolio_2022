@@ -6,7 +6,7 @@ module.exports = {
   darkMode: 'media',
   theme: {
     minHeight: {
-      screen: '90vh',
+      screen: 'calc(100vh - 6em)',
     },
     colors: {
       primary: colors.slate,

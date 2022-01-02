@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
-    <div className=' flex flex-col items-center justify-center min-h-screen max-w-7xl mx-auto px-5 sm:px-11 lg:px-8'>
+    <div className='flex flex-col items-center justify-center min-h-screen max-w-7xl mx-auto px-5 sm:px-11 lg:px-8'>
       <div>
         <section>
           <h1 className='text-secondary-200'>Hi,</h1>
@@ -20,9 +20,7 @@ export default function Home() {
           </p>
         </section>
         <Link href='/contact'>
-          <button
-            type='button'
-            className='mt-5 sm:mt-3 py-3 px-8 border-solid border-2 border-secondary-500 rounded text-secondary-500 hover:text-primary-50 hover:border-primary-50 hover:bg-primary-900 hover:animate-pulse'>
+          <button type='button' className='link-btn'>
             CONTACT ME!
           </button>
         </Link>

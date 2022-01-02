@@ -1,3 +1,7 @@
+import { FiLinkedin, FiGithub } from 'react-icons/fi';
+import { HiOutlineMail } from 'react-icons/hi';
+import { ImWhatsapp } from 'react-icons/im';
+
 const navLinks = [
   {
     title: 'About',
@@ -26,9 +30,32 @@ const navLinks = [
   {
     title: 'Resume',
     path: '/resume',
-    current: true,
-    status: true,
+    current: false,
+    status: false,
   },
 ];
 
-export { navLinks };
+const socialLinks = [
+  {
+    title: 'LinkedIn',
+    icon: <FiLinkedin />,
+    link: 'https://www.linkedin.com/in/mostafahazareh/',
+  },
+  {
+    title: 'Github',
+    icon: <FiGithub />,
+    link: 'https://github.com/mostafaIn',
+  },
+  {
+    title: 'Email',
+    icon: <HiOutlineMail />,
+    link: 'mailto:mostafa.hazareh@hotmail.com',
+  },
+  {
+    title: 'Whatsapp',
+    icon: <ImWhatsapp />,
+    link: 'https://wa.me/358451070737',
+  },
+];
+
+export { navLinks, socialLinks };
