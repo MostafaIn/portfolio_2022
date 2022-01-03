@@ -1,6 +1,21 @@
+// ICONS
 import { FiLinkedin, FiGithub } from 'react-icons/fi';
 import { HiOutlineMail } from 'react-icons/hi';
 import { ImWhatsapp } from 'react-icons/im';
+import {
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiGraphql,
+  SiRedux,
+  SiWordpress,
+  SiMongodb,
+  SiFirebase,
+  SiJest,
+  SiMaterialui,
+  SiTailwindcss,
+  SiFigma,
+} from 'react-icons/si';
 
 const navLinks = [
   {
@@ -58,4 +73,59 @@ const socialLinks = [
   },
 ];
 
-export { navLinks, socialLinks };
+const mySkills = [
+  {
+    skill: 'JavaScript',
+    icon: <SiJavascript />,
+  },
+  {
+    skill: 'TypeScript',
+    icon: <SiTypescript />,
+  },
+  {
+    skill: 'React',
+    icon: <SiReact />,
+  },
+  {
+    skill: 'React Native',
+    icon: <SiReact />,
+  },
+  {
+    skill: 'GraphQL',
+    icon: <SiGraphql />,
+  },
+  {
+    skill: 'Redux',
+    icon: <SiRedux />,
+  },
+  {
+    skill: 'WordPress',
+    icon: <SiWordpress />,
+  },
+  {
+    skill: 'MongoDB',
+    icon: <SiMongodb />,
+  },
+  {
+    skill: 'Firebase',
+    icon: <SiFirebase />,
+  },
+  {
+    skill: 'Jest',
+    icon: <SiJest />,
+  },
+  {
+    skill: 'Material-UI',
+    icon: <SiMaterialui />,
+  },
+  {
+    skill: 'Tailwind css',
+    icon: <SiTailwindcss />,
+  },
+  {
+    skill: 'Figma',
+    icon: <SiFigma />,
+  },
+];
+
+export { navLinks, socialLinks, mySkills };

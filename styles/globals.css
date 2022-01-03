@@ -36,7 +36,7 @@
     @apply font-mono text-primary-300 text-2xl lg:text-5xl md:text-4xl;
   }
   p {
-    @apply text-lg sm:text-base text-primary-400;
+    @apply text-lg md:text-xl text-primary-400;
   }
 }
 
