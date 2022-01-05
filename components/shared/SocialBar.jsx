@@ -2,7 +2,7 @@ import { socialLinks } from '@/utils/constants';
 
 const SocialBar = () => {
   return (
-    <div className='hidden lg:block fixed left-2 md:left-8 bottom-0 z-30'>
+    <div className='hidden md:block fixed left-2 md:left-8 bottom-0 z-30'>
       <div className='flex flex-col  justify-center items-center text-primary-500'>
         {socialLinks.map((link) => (
           <a
