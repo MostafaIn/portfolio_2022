@@ -27,9 +27,6 @@ module.exports = {
       borderRadius: {
         '4xl': '2rem',
       },
-      backgroundImage: {
-        'index-hero': "url('/public/images/index-hero.jpeg')",
-      },
     },
   },
   variants: {

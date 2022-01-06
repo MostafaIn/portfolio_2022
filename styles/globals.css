@@ -48,7 +48,7 @@
     @apply py-3 px-8 rounded-full font-mono text-lg border-2 text-center text-secondary-500 hover:text-primary-50 hover:bg-secondary-500 hover:animate-pulse;
   }
   .hero-container {
-    @apply fixed min-h-[calc(85vh)] w-full overflow-hidden opacity-10;
+    @apply fixed min-h-[calc(85vh)] w-full overflow-hidden opacity-25;
   }
 }
 
