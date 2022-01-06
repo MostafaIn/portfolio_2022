@@ -15,6 +15,7 @@ import {
   SiMaterialui,
   SiTailwindcss,
   SiFigma,
+  SiExpress,
 } from 'react-icons/si';
 
 const navLinks = [
@@ -77,54 +78,67 @@ const mySkills = [
   {
     skill: 'JavaScript',
     icon: <SiJavascript />,
+    svg: '/images/skills/javascript.svg',
   },
   {
     skill: 'TypeScript',
     icon: <SiTypescript />,
+    svg: '/images/skills/typescript.svg',
   },
   {
-    skill: 'React',
+    skill: 'React/ReactNative',
     icon: <SiReact />,
+    svg: '/images/skills/react.svg',
   },
   {
-    skill: 'React Native',
-    icon: <SiReact />,
+    skill: 'Express',
+    icon: <SiExpress />,
+    svg: '/images/skills/expressjs.svg',
   },
   {
     skill: 'GraphQL',
     icon: <SiGraphql />,
+    svg: '/images/skills/graphql.svg',
   },
   {
     skill: 'Redux',
     icon: <SiRedux />,
+    svg: '/images/skills/redux.svg',
   },
   {
     skill: 'WordPress',
     icon: <SiWordpress />,
+    svg: '/images/skills/wordpress.svg',
   },
   {
     skill: 'MongoDB',
     icon: <SiMongodb />,
+    svg: '/images/skills/mongodb.svg',
   },
   {
     skill: 'Firebase',
     icon: <SiFirebase />,
+    svg: '/images/skills/firebase.svg',
   },
   {
     skill: 'Jest',
     icon: <SiJest />,
+    svg: '/images/skills/jest.svg',
   },
   {
     skill: 'Material-UI',
     icon: <SiMaterialui />,
+    svg: '/images/skills/material-ui.svg',
   },
   {
     skill: 'Tailwind css',
     icon: <SiTailwindcss />,
+    svg: '/images/skills/tailwind-css.svg',
   },
   {
     skill: 'Figma',
     icon: <SiFigma />,
+    svg: '/images/skills/figma.svg',
   },
 ];
 
