@@ -2,11 +2,18 @@ import Link from 'next/link';
 import Image from 'next/image';
 import profilePic from '@/images/indexHero.png';
 
-export default function Home() {
+const Home = () => {
   return (
     <>
-      <div className='hidden sm:block hero-container -z-1'>
-        <Image src={profilePic} alt='my-hero-photo' layout='fill' objectFit='cover' quality={100} />
+      <div className='hidden sm:block min-w-full min-h-screen hero-container -z-1'>
+        <Image
+          src={profilePic}
+          alt='my-hero-photo'
+          priority='true'
+          layout='fill'
+          objectFit='cover'
+          quality={100}
+        />
       </div>
       <div className='flex flex-col items-center lg:items-start justify-center min-h-screen max-w-4xl mx-auto px-4 lg:px-1'>
         <div className='max-w-3xl'>
@@ -31,4 +38,5 @@ export default function Home() {
       </div>
     </>
   );
-}
+};
+export default Home;
