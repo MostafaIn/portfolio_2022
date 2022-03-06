@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Disclosure } from '@headlessui/react';
 import { GrClose, GrMenu } from 'react-icons/gr';
@@ -11,6 +12,10 @@ function classNames(...classes) {
 }
 
 const NavBar = () => {
+  const { route } = useRouter();
+  console.log(route);
+  let NAVLINKS = navLinks.map((link) => (link.path === route ? { ...link, current: true } : { ...link }));
+
   return (
     <Disclosure as='nav' className='sticky top-0 h-24 bg-tbg'>
       {({ open }) => (
@@ -22,15 +27,9 @@ const NavBar = () => {
                 <Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-primary-50 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
                   <span className='sr-only'>Open main menu</span>
                   {open ? (
-                    <GrClose
-                      className='block h-12 w-12 p-3 rounded-full bg-secondary-200 hover:animate-pulse'
-                      aria-hidden='true'
-                    />
+                    <GrClose className='block h-12 w-12 p-3 rounded-full bg-secondary-200 hover:animate-pulse' aria-hidden='true' />
                   ) : (
-                    <GrMenu
-                      className='block h-12 w-12 p-3 rounded-full bg-secondary-200 hover:animate-pulse'
-                      aria-hidden='true'
-                    />
+                    <GrMenu className='block h-12 w-12 p-3 rounded-full bg-secondary-200 hover:animate-pulse' aria-hidden='true' />
                   )}
                 </Disclosure.Button>
               </div>
@@ -45,24 +44,25 @@ const NavBar = () => {
                 </div>
                 <div className='hidden sm:block sm:ml-6'>
                   <div className='flex space-x-8 items-center'>
-                    {navLinks.map((item) =>
+                    {NAVLINKS.map((item) =>
                       item.title.includes('Resume') ? (
                         <a className='resume-btn' key={item.title} href={item.path}>
                           {item.title}
                         </a>
                       ) : (
-                        <a
-                          key={item.title}
-                          href={item.path}
-                          className={classNames(
-                            item.current
-                              ? 'text-secondary-400 border-b-2 border-secondary-500'
-                              : 'text-secondary-50 hover:bg-gray-700 hover:text-secondary-400',
-                            'px-3 py-2 text-lg font-sans hover:border-b-2 hover:border-secondary-500'
-                          )}
-                          aria-current={item.current ? 'page' : undefined}>
-                          {item.title}
-                        </a>
+                        <div onClick={() => console.log(item)}>
+                          <a
+                            key={item.title}
+                            href={item.path}
+                            className={`${
+                              item.current ? 'text-secondary-400 pb-1 border-b-2 border-secondary-500' : 'text-secondary-50 nav-item'
+
+                              // : 'text-secondary-50 relative before:border-b-2 before:absolute block w-full h-1 bottom-0 left-0 scale-x-50 tran hover:scale-x-100 hover:bg-gray-700 hover:text-secondary-400'
+                            }`}
+                            aria-current={item.current ? `${item.title} page` : undefined}>
+                            {item.title}
+                          </a>
+                        </div>
                       )
                     )}
                   </div>
@@ -74,16 +74,14 @@ const NavBar = () => {
 
           <Disclosure.Panel className='sm:hidden'>
             <div className='px-2 pt-2 pb-3 space-y-1'>
-              {navLinks.map((item) => (
+              {NAVLINKS.map((item) => (
                 <Disclosure.Button
                   key={item.title}
                   as='a'
                   href={item.path}
                   className={classNames(
-                    item.current
-                      ? 'text-white'
-                      : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
+                    item.current ? 'text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                    'block px-3 py-2 rounded-md text-base font-medium bg-primary-50'
                   )}
                   aria-current={item.current ? 'page' : undefined}>
                   {item.title}

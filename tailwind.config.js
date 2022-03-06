@@ -17,7 +17,8 @@ module.exports = {
       fontFamily: {
         Calibre: ['Calibre'],
         Tabitha: ['Tabitha'],
-        sans: ['Calibre', 'Tabitha', 'sans-serif'],
+        MeriendaOne: ['Merienda One'],
+        sans: ['Merienda One', 'Calibre', 'sans-serif'],
         mono: ['Tabitha', 'Calibre', 'sans-serif'],
       },
       spacing: {

@@ -19,6 +19,11 @@ import {
   SiNode,
 } from 'react-icons/si';
 
+import integrify from '@/images/logos/integrify.png';
+import dealRoomEvents from '@/images/logos/dealRoomEvents.png';
+import arcada from '@/images/logos/arcada.png';
+import theShortcut from '@/images/logos/theShortcut.png';
+
 const navLinks = [
   {
     title: 'About',
@@ -162,4 +167,52 @@ const mySkills = [
   },
 ];
 
-export { navLinks, socialLinks, mySkills };
+const myExperiences = [
+  {
+    id: 1,
+    position: 'Junior Web Developer',
+    company: 'Integrify Oy',
+    coIcon: integrify,
+    startDate: 'Jan 2019',
+    endDate: 'Sep 2019',
+    tasks: ['Upgrade my web development skills', 'look for job'],
+  },
+  {
+    id: 2,
+    position: 'Front-end Mobile Developer',
+    company: 'Deal Room Events',
+    coIcon: dealRoomEvents,
+    startDate: 'Dec 2019',
+    endDate: 'Mar 2020',
+    tasks: ["Rebuilt it's mobile App using React Native"],
+  },
+  {
+    id: 3,
+    position: 'Full-stack Developer & Mentor',
+    company: 'The Startup Shortcut',
+    coIcon: theShortcut,
+    startDate: 'Jun 2020',
+    endDate: 'Oct 2020',
+    tasks: ["Work on it's website", 'hands on teaching on full-stack training batch'],
+  },
+  {
+    id: 4,
+    position: 'Full-stack Developer',
+    company: 'ARCADA',
+    coIcon: arcada,
+    startDate: 'Oct 2020',
+    endDate: 'Mar 2021',
+    tasks: ['built studerapasvenska.fi from scratch', 'look for job'],
+  },
+  {
+    id: 5,
+    position: 'Tech Lead & Trainer',
+    company: 'The Startup Shortcut',
+    coIcon: theShortcut,
+    startDate: 'Mar 2021',
+    endDate: 'Feb 2022',
+    tasks: ['Rebuilt its website', 'teaching on coding101 training programme'],
+  },
+];
+
+export { navLinks, socialLinks, mySkills, myExperiences };

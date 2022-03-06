@@ -6,7 +6,7 @@ const Skills = () => {
     <div className='flex flex-wrap items-center justify-center min-h-max min-w-full'>
       {mySkills.map(({ id, title, svg }) => (
         <div key={id} className='p-2 sm:p-4'>
-          <img src={svg} alt={title} width={75} height={75} className='motion-safe:animate-pulse' />
+          <Image src={svg} alt={title} width={75} height={75} className='motion-safe:animate-pulse' />
         </div>
       ))}
     </div>
