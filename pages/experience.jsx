@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react';
 import { Tab } from '@headlessui/react';
 import Image from 'next/image';
 
+import Title from '@/components/Title';
 import { myExperiences } from '@/utils/constants';
 import { FaRegArrowAltCircleRight } from 'react-icons/fa';
 
@@ -13,7 +14,7 @@ const MyTabs = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   console.log(selectedIndex);
   return (
-    <div className='w-full lg:flex justify-start px-2 py-16 sm:px-0'>
+    <div className='w-full lg:flex justify-start px-2 py-7 sm:px-0'>
       <Tab.Group onChange={(index) => setSelectedIndex(index)}>
         <Tab.List className='flex lg:flex-col flex-initial items-center justify-between w-80 p-1'>
           {myExperiences.map((exp) => (
@@ -61,8 +62,8 @@ const MyTabs = () => {
 
 const Experience = () => {
   return (
-    <div className='flex flex-col items-start justify-center min-h-screen max-w-xl lg:max-w-4xl mx-auto px-4 md:px-1 pt-10'>
-      <h2 className='border-b-2 border-secondary-500 text-secondary-500'>Where I've worked</h2>
+    <div className='page-wrapper'>
+      <Title>Where I've worked</Title>
       <br />
       <br />
       <section>

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { mySkills } from '@/utils/constants';
+import Title from '@/components/Title';
 
 const Skills = () => {
   return (
@@ -15,20 +16,19 @@ const Skills = () => {
 
 const About = () => {
   return (
-    <div className='flex flex-col items-start justify-center min-h-screen max-w-xl lg:max-w-4xl mx-auto px-4 md:px-1 pt-10'>
-      <h2 className='border-b-2 border-secondary-500 text-secondary-500'>What I Can Do</h2>
+    <div className='page-wrapper'>
+      <Title>What I Can Do</Title>
       <br />
       <br />
       <section>
         <p>
-          My specialty is Web app design and development. My updated skills are vanilla javascript
-          with new features, a good understanding of ReactJS / React Native, NodeJS, Redux, MERN
-          Stack, and always ready to learn day by day.
+          My specialty is Web app design and development. My updated skills are vanilla javascript with new features, a good understanding of ReactJS
+          / React Native, NodeJS, Redux, MERN Stack, and always ready to learn day by day.
         </p>
         <br />
         <p>
-          Currently, I have been working on building an online assessment platform. That covers
-          everything I have learned and needs some modern technologies to learn.
+          Currently, I have been working on building an online assessment platform. That covers everything I have learned and needs some modern
+          technologies to learn.
         </p>
         <br />
       </section>

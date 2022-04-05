@@ -1,11 +1,11 @@
-
+import Title from '@/components/Title';
 
 const work = () => {
-    return (
-        <h1>
-         what I have built!   
-        </h1>
-    )
-}
+  return (
+    <div className='page-wrapper'>
+      <Title>what I have built!</Title>
+    </div>
+  );
+};
 
-export default work
+export default work;

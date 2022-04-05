@@ -215,4 +215,57 @@ const myExperiences = [
   },
 ];
 
-export { navLinks, socialLinks, mySkills, myExperiences };
+const projects = [
+  {
+    title: 'Student Assessment System',
+    mockup: 'image',
+    description: [
+      'A question bank database for teachers/trainers',
+      'Create, edit and publish quiz or test',
+      'Quickly review the tests and return the result or feedback to the student',
+      'Analyz the student strengths and weaknesses',
+    ],
+    tools: ['ReactJS', 'Redux', 'MUI', 'MongoDB', 'ExpressJS'],
+    code: 'code-link',
+    demo: 'live-link',
+  },
+  {
+    title: 'OPI Suomea',
+    mockup: 'image',
+    description: [
+      'A social media App for Finnish learners',
+      'Possible to follow the lectures',
+      'Do the assignments and check the results',
+      'Chat with other participants',
+    ],
+    tools: ['NextJS', 'Redux', 'React Bootstrap', 'CMS', 'Firebase'],
+    code: 'code-link',
+    demo: 'live-link',
+  },
+  {
+    title: 'Dev Connector',
+    mockup: 'image',
+    description: ['Create a developer profile/portfolio', 'Share posts and get help from other developers'],
+    tools: ['ReactJS', 'Redux', 'MUI', 'MongoDB', 'ExpressJS'],
+    code: 'code-link',
+    demo: 'live-link',
+  },
+  {
+    title: 'The Shop',
+    mockup: 'image',
+    description: '',
+    tools: ['React Native', 'Redux', 'Firebase', 'NativeBase'],
+    code: 'code-link',
+    demo: 'live-link',
+  },
+  {
+    title: 'Weather App',
+    mockup: 'image',
+    description: ['Fetch weather data from openweathermap.org', 'Allow user to enter city name, as well as switch between metric and imperial units'],
+    tools: ['ReactNative', 'Context-API', 'NativeBase'],
+    code: 'code-link',
+    demo: 'live-link',
+  },
+];
+
+export { navLinks, socialLinks, mySkills, myExperiences, projects };

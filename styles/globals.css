@@ -56,6 +56,9 @@
   .hero-container {
     @apply fixed min-h-[calc(85vh)] w-full overflow-hidden opacity-25;
   }
+  .page-wrapper {
+    @apply flex flex-col items-start justify-center min-h-screen max-w-xl lg:max-w-4xl mx-auto px-4 md:px-1 pt-10;
+  }
 }
 
 @layer utilities {

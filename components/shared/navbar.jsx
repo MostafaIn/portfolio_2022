@@ -50,18 +50,14 @@ const NavBar = () => {
                           {item.title}
                         </a>
                       ) : (
-                        <div onClick={() => console.log(item)}>
-                          <a
-                            key={item.title}
-                            href={item.path}
-                            className={`${
-                              item.current ? 'text-secondary-400 pb-1 border-b-2 border-secondary-500' : 'text-secondary-50 nav-item'
-
-                              // : 'text-secondary-50 relative before:border-b-2 before:absolute block w-full h-1 bottom-0 left-0 scale-x-50 tran hover:scale-x-100 hover:bg-gray-700 hover:text-secondary-400'
-                            }`}
-                            aria-current={item.current ? `${item.title} page` : undefined}>
-                            {item.title}
-                          </a>
+                        <div onClick={() => console.log(item)} key={item.title}>
+                          <Link href={item.path} passHref>
+                            <a
+                              className={`${item.current ? 'text-secondary-400 pb-1 border-b-2 border-secondary-500' : 'text-secondary-50 nav-item'}`}
+                              aria-current={item.current ? `${item.title} page` : undefined}>
+                              {item.title}
+                            </a>
+                          </Link>
                         </div>
                       )
                     )}
